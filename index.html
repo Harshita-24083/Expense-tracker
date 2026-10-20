@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expense tracker</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+
+        #add {
+            background-color: rgb(6, 217, 6);
+            color: white;
+            width: 60px;
+            border-radius: 4px;
+            height: 23px;
+            
+        }
+
+        .con {
+            border: 2px solid black;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            width: 700px;
+            height: 500px;
+            gap: 10px;
+          
+            overflow-y: scroll;
+        }
+
+        h2 {
+            padding: 5px;
+        }
+
+        input {
+            margin: 5px;
+            font-size: 15px;
+        }
+
+        table {
+            font-size: 18px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            background-color: rgb(231, 230, 230);
+            text-align: left;
+            padding: 8px;
+            width: 25%;
+            margin-top: 20px;
+        }
+
+        td {
+
+            text-align: left;
+            padding: 8px;
+            width: 25%;
+
+        }
+
+        tr {
+            border: 1px solid rgb(48, 47, 47);
+        }
+
+        #total {
+          
+            text-align: end;
+            margin-top: auto;
+            color: rgb(0, 179, 0);
+        }
+        .id
+        {
+            background-color: white;
+            border: none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="con">
+
+        <h2>Add Expense</h2>
+        <div>
+            <input type="text" id="item" placeholder="Items...">
+            <input type="text" id="cate" placeholder="Category...">
+            <input type="text" id="amm" placeholder="Amount...">
+            <button id="add">Add</button>
+        </div>
+
+        <table id="table">
+            <tr>
+                <th>Items</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Action</th>
+            </tr>
+        </table>
+        <h1 id="total"></h1>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
